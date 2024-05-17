@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri May 17 13:12:23 2024
+# Process ID: 1950639
+# Current directory: /home/jory/Code_Projects/verilog/verilog-projects/project_5/project_5.runs/impl_1
+# Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: /home/jory/Code_Projects/verilog/verilog-projects/project_5/project_5.runs/impl_1/top.vdi
+# Journal file: /home/jory/Code_Projects/verilog/verilog-projects/project_5/project_5.runs/impl_1/vivado.jou
+# Running On: yogurtseversever, OS: Linux, CPU Frequency: 3600.688 MHz, CPU Physical cores: 6, Host memory: 33467 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
