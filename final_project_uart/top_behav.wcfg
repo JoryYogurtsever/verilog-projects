@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="431.000001 us"></ZoomEndTime>
+      <Cursor1Time time="91.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="198"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject type="logic" fp_name="/top/left_btn">
+      <obj_property name="ElementShortName">left_btn</obj_property>
+      <obj_property name="ObjectShortName">left_btn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/right_btn">
+      <obj_property name="ElementShortName">right_btn</obj_property>
+      <obj_property name="ObjectShortName">right_btn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/jump_btn">
+      <obj_property name="ElementShortName">jump_btn</obj_property>
+      <obj_property name="ObjectShortName">jump_btn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/uart_receiver_pin">
+      <obj_property name="ElementShortName">uart_receiver_pin</obj_property>
+      <obj_property name="ObjectShortName">uart_receiver_pin</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/uart_transmitter_pin">
+      <obj_property name="ElementShortName">uart_transmitter_pin</obj_property>
+      <obj_property name="ObjectShortName">uart_transmitter_pin</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/unbounced_left_button">
+      <obj_property name="ElementShortName">unbounced_left_button</obj_property>
+      <obj_property name="ObjectShortName">unbounced_left_button</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/unbounced_right_button">
+      <obj_property name="ElementShortName">unbounced_right_button</obj_property>
+      <obj_property name="ObjectShortName">unbounced_right_button</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/unbounced_jump_button">
+      <obj_property name="ElementShortName">unbounced_jump_button</obj_property>
+      <obj_property name="ObjectShortName">unbounced_jump_button</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/wClk_VAR_0">
+      <obj_property name="ElementShortName">wClk_VAR_0</obj_property>
+      <obj_property name="ObjectShortName">wClk_VAR_0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/clk_frequency">
+      <obj_property name="ElementShortName">clk_frequency[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_frequency[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/dbc_interval">
+      <obj_property name="ElementShortName">dbc_interval[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbc_interval[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/baud_rate">
+      <obj_property name="ElementShortName">baud_rate[31:0]</obj_property>
+      <obj_property name="ObjectShortName">baud_rate[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/DBC_WALKLEFT/rCount">
+      <obj_property name="ElementShortName">rCount[999:0]</obj_property>
+      <obj_property name="ObjectShortName">rCount[999:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/DBC_WALKLEFT/DFF1">
+      <obj_property name="ElementShortName">DFF1</obj_property>
+      <obj_property name="ObjectShortName">DFF1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/DBC_WALKLEFT/DFF2">
+      <obj_property name="ElementShortName">DFF2</obj_property>
+      <obj_property name="ObjectShortName">DFF2</obj_property>
+   </wvobject>
+</wave_config>
