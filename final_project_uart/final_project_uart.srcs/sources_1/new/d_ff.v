@@ -3,10 +3,13 @@
 // Basic D-Flip Flop
 module d_ff(
         input clk,d,
-        output reg q
+        output q
     );
+    reg temp;
     always @ (posedge clk)
         begin
-        q <= d;
+        // assign the output value on the positive edge of the clock provided (may be slow clock)
+        temp <= d;
         end
+assign q = temp;
 endmodule

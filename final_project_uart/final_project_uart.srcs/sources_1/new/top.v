@@ -1,66 +1,60 @@
 module top #(
-idle_message = 8'b01001001,
-jump_message = 8'b01001010,
-left_message = 8'b01001100,
-right_message = 8'b01010010,
 clk_board = 100_000_000,// Board clock frequency [Hz].
-clk_frequency = 10_000_000, // Master clock frequency [Hz].
-dbc_interval = 10,        // Debouncer lock interval [ms].
 baud_rate = 9600
 ) (
     input left_btn, right_btn, jump_btn, clk, reset, uart_receiver_pin,
     output uart_transmitter_pin
 );
 
-wire unbounced_left_button = 1'b0;
-wire unbounced_right_button = 1'b0;
-wire unbounced_jump_button = 1'b0;
-wire wClk_VAR_0;
-reg transmitting = 1'b0;
-reg receiving = 1'b0;
+wire unbounced_left_button;
+wire unbounced_right_button;
+wire unbounced_jump_button;
+wire change_left_button;
+wire change_right_button;
+wire change_jump_button;
+wire db_clock;
+wire uart_clock;
+reg transmitting = 1'b1;
+reg receiving;
 // Clocking and timing parameters.
+reg [25:0] db_clock_period = 25'b0101111101011110000100000;
+reg [25:0] uart_clock_period = 25'b0000000000001010001011000;
 
-debounce #(
-    .C_CLK_FRQ(clk_frequency),      // Reference clock frequency [Hz].
-    .C_INTERVAL(dbc_interval)     // Debounce lock interval [ms].
-) DBC_WALKLEFT (
-    .rstb(reset),
-    .clk(clk),
-    .in(left_btn),                    // Input button #0.
-    .out(unbounced_left_button)
+slow_clock get_db_clk(clk, db_clock_period, db_clock);
+slow_clock get_uart_clk(clk, uart_clock_period, uart_clock);
+
+
+debounce2 db_walk_left (
+    left_btn,                    // Input button #0.
+    db_clock,
+    unbounced_left_button,
+    change_left_button
 ); 
  
-debounce #(
-    .C_CLK_FRQ(clk_frequency),      // Reference clock frequency [Hz].
-    .C_INTERVAL(dbc_interval)     // Debounce lock interval [ms].
-) DBC_WALKRIGHT (
-    .rstb(reset),
-    .clk(clk),
-    .in(right_btn),                    // Input button #0.
-    .out(unbounced_right_button)
+debounce2 db_walk_right (
+    right_btn,
+    db_clock,
+    unbounced_right_button,
+    change_right_button
 ); 
 
-debounce #(
-    .C_CLK_FRQ(clk_frequency),      // Reference clock frequency [Hz].
-    .C_INTERVAL(dbc_interval)     // Debounce lock interval [ms].
-) DBC_JUMP (
-    .rstb(reset),
-    .clk(clk),
-    .in(jump_btn),                    // Input button #0.
-    .out(unbounced_jump_button)
+debounce2 db_jump (
+    jump_btn,
+    db_clock,
+    unbounced_jump_button,
+    change_jump_button
 );
 
-
-
-//always @ (ubL, ubR, ubJ)
-//begin
-// We need to transmitt Idle if both walk values are false
-//transmitting = 1'b1;
-//end
-
-//always @ (urc)
-//begin
-//receiving = 1'b1;
-//end
+transmit_controller tmc (
+    uart_clock,
+    clk,
+    reset,
+    idle_message,
+    transmitting,
+    unbounced_left_button,
+    unbounced_right_button,
+    unbounced_jump_button,
+    uart_transmitter_pin
+);
 
 endmodule
