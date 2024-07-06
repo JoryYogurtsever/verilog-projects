@@ -49,28 +49,28 @@ module transmit_controller #(
 ////            data <= 8'b00000000;
 //        end
         case(uart_state)
-        2'b00: // Idle State
+        0: // Idle State
         begin
             uart_transmitter_pin <= 1;
-            counter <= 0;
+//            counter <= 0;
             if (transmitting == 1)
             begin
                 next_uart_state <= 2'b01;
             end            
         end
-        2'b01: // Load Register
+        1: // Load Register
         begin
             shift_register <= {1'b1, data, 1'b0};
             next_uart_state <= 2'b10;
         end
-        2'b10: // Shifting
+        2: // Shifting
         begin
             if (counter == 10) // full message has been transmitted
                begin
 //                 next_state <= 0; // Return to the idle state
-                 counter <= 0;
+//                 counter <= 0;
                  uart_transmitter_pin <= 1;
-                 next_uart_state <= 2'b00;
+                 next_uart_state <= 3;
 //                 transmitting <= 0;
 //                 next_state <= 0;
                end
@@ -83,9 +83,22 @@ module transmit_controller #(
                      // Data will then bit shift and this bit will be updated until all 10 bits have transmitted                            
                   end
         end
+        3:
+        begin
+           counter <= 0;
+           if (transmitting == 0)
+           begin
+               next_uart_state <= 0;
+           end
+           else
+           begin
+               next_uart_state <= 3;
+           end
+        end
+        
         default:
             begin
-                next_uart_state <= 2'b00; // default is idle
+                next_uart_state <= 0; // default is idle
 //                uart_state <= 0;
             end
         endcase
@@ -103,6 +116,7 @@ module transmit_controller #(
         0: // Idle State
         begin
 //            next_uart_state <= 0;
+            transmitting <= 0;
             // Change is detected before the unbounced value is inverted,
             // Therefore the logic is referencing the previous state before a change
             if (~unbounced_jump_button && change_jump_button)
@@ -135,7 +149,7 @@ module transmit_controller #(
         begin
             next_state <= 0; // ensure we remain in the transmission state
             transmitting <= 1;
-            counter <= 0;
+//            counter <= 0;
         end
         default: next_state <= 0; // default state should be idle state
         endcase

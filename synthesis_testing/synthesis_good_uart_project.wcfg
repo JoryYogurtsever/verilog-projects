@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_func_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="2,566.000000001 ms"></ZoomEndTime>
+      <Cursor1Time time="1,600.001000000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="137"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/tb/left_btn">
+      <obj_property name="ElementShortName">left_btn</obj_property>
+      <obj_property name="ObjectShortName">left_btn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/right_btn">
+      <obj_property name="ElementShortName">right_btn</obj_property>
+      <obj_property name="ObjectShortName">right_btn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/jump_btn">
+      <obj_property name="ElementShortName">jump_btn</obj_property>
+      <obj_property name="ObjectShortName">jump_btn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/uart_transmitter_pin">
+      <obj_property name="ElementShortName">uart_transmitter_pin</obj_property>
+      <obj_property name="ObjectShortName">uart_transmitter_pin</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/tmc/state">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/tmc/transmitting">
+      <obj_property name="ElementShortName">transmitting</obj_property>
+      <obj_property name="ObjectShortName">transmitting</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/tmc/shift_register">
+      <obj_property name="ElementShortName">shift_register[9:1]</obj_property>
+      <obj_property name="ObjectShortName">shift_register[9:1]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/tmc/in5">
+      <obj_property name="ElementShortName">in5[7:1]</obj_property>
+      <obj_property name="ObjectShortName">in5[7:1]</obj_property>
+   </wvobject>
+</wave_config>
