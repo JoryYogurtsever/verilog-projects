@@ -14,14 +14,18 @@ wire change_right_button;
 wire change_jump_button;
 wire db_clock;
 wire uart_clock;
+wire receiver_clock;
 reg transmitting = 1'b1;
 reg receiving;
 // Clocking and timing parameters.
-reg [25:0] db_clock_period = 25'b0101111101011110000100000;
+reg [25:0] db_clock_period = 25'b0000100110001001011010000;
 reg [25:0] uart_clock_period = 25'b0000000000001010001011000;
+reg [25:0] receiver_clock_period = 25'b0000000000000010100010110;
+wire [7:0] received_data;
 
 slow_clock get_db_clk(clk, db_clock_period, db_clock);
 slow_clock get_uart_clk(clk, uart_clock_period, uart_clock);
+slow_clock get_receiver_clk(clk, receiver_clock_period, receiver_clock);
 
 
 debounce2 db_walk_left (
@@ -47,14 +51,22 @@ debounce2 db_jump (
 
 transmit_controller tmc (
     uart_clock,
-    clk,
+    db_clock,
     reset,
-    idle_message,
-    transmitting,
     unbounced_left_button,
     unbounced_right_button,
     unbounced_jump_button,
+    change_left_button,
+    change_right_button,
+    change_jump_button,
     uart_transmitter_pin
+);
+
+receiver_controller rcc (
+    clk,
+    reset,
+    uart_receiver_pin,
+    received_data
 );
 
 endmodule

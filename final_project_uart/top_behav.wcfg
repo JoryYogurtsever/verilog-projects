@@ -3,128 +3,188 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="top_behav.wdb" id="1">
+      <db_ref path="tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="top" />
+            <top_module name="tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="499,592.660349 us"></ZoomStartTime>
-      <ZoomEndTime time="501,808.660350 us"></ZoomEndTime>
-      <Cursor1Time time="501,108.660349 us"></Cursor1Time>
+      <ZoomStartTime time="149,802.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="152,050.000001 us"></ZoomEndTime>
+      <Cursor1Time time="150,966.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="253"></NameColumnWidth>
-      <ValueColumnWidth column_width="123"></ValueColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
-   <wvobject type="logic" fp_name="/top/left_btn">
+   <WVObjectSize size="41" />
+   <wvobject type="logic" fp_name="/tb/top/left_btn">
       <obj_property name="ElementShortName">left_btn</obj_property>
       <obj_property name="ObjectShortName">left_btn</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/right_btn">
+   <wvobject type="logic" fp_name="/tb/top/right_btn">
       <obj_property name="ElementShortName">right_btn</obj_property>
       <obj_property name="ObjectShortName">right_btn</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/jump_btn">
+   <wvobject type="logic" fp_name="/tb/top/jump_btn">
       <obj_property name="ElementShortName">jump_btn</obj_property>
       <obj_property name="ObjectShortName">jump_btn</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/clk">
+   <wvobject type="logic" fp_name="/tb/top/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/uart_transmitter_pin">
+   <wvobject type="logic" fp_name="/tb/top/uart_transmitter_pin">
       <obj_property name="ElementShortName">uart_transmitter_pin</obj_property>
       <obj_property name="ObjectShortName">uart_transmitter_pin</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/unbounced_left_button">
+   <wvobject type="logic" fp_name="/tb/top/unbounced_left_button">
       <obj_property name="ElementShortName">unbounced_left_button</obj_property>
       <obj_property name="ObjectShortName">unbounced_left_button</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/unbounced_right_button">
+   <wvobject type="logic" fp_name="/tb/top/unbounced_right_button">
       <obj_property name="ElementShortName">unbounced_right_button</obj_property>
       <obj_property name="ObjectShortName">unbounced_right_button</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/unbounced_jump_button">
+   <wvobject type="logic" fp_name="/tb/top/unbounced_jump_button">
       <obj_property name="ElementShortName">unbounced_jump_button</obj_property>
       <obj_property name="ObjectShortName">unbounced_jump_button</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/db_clock">
+   <wvobject type="logic" fp_name="/tb/top/db_clock">
       <obj_property name="ElementShortName">db_clock</obj_property>
       <obj_property name="ObjectShortName">db_clock</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/db_walk_left/db_clk">
+   <wvobject type="logic" fp_name="/tb/top/db_walk_left/db_clk">
       <obj_property name="ElementShortName">db_clk</obj_property>
       <obj_property name="ObjectShortName">db_clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/clk">
+   <wvobject type="logic" fp_name="/tb/top/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/change_left_button">
+   <wvobject type="logic" fp_name="/tb/top/change_left_button">
       <obj_property name="ElementShortName">change_left_button</obj_property>
       <obj_property name="ObjectShortName">change_left_button</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/change_right_button">
+   <wvobject type="logic" fp_name="/tb/top/change_right_button">
       <obj_property name="ElementShortName">change_right_button</obj_property>
       <obj_property name="ObjectShortName">change_right_button</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/change_jump_button">
+   <wvobject type="logic" fp_name="/tb/top/change_jump_button">
       <obj_property name="ElementShortName">change_jump_button</obj_property>
       <obj_property name="ObjectShortName">change_jump_button</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top/tmc/data">
+   <wvobject type="array" fp_name="/tb/top/tmc/data">
       <obj_property name="ElementShortName">data[7:0]</obj_property>
       <obj_property name="ObjectShortName">data[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top/tmc/transmitting">
-      <obj_property name="ElementShortName">transmitting[7:0]</obj_property>
-      <obj_property name="ObjectShortName">transmitting[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/tb/top/tmc/transmitting">
+      <obj_property name="ElementShortName">transmitting</obj_property>
+      <obj_property name="ObjectShortName">transmitting</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/tmc/uart_transmitter_pin">
+   <wvobject type="logic" fp_name="/tb/top/tmc/uart_transmitter_pin">
       <obj_property name="ElementShortName">uart_transmitter_pin</obj_property>
       <obj_property name="ObjectShortName">uart_transmitter_pin</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top/tmc/shift_register">
+   <wvobject type="array" fp_name="/tb/top/tmc/shift_register">
       <obj_property name="ElementShortName">shift_register[9:0]</obj_property>
       <obj_property name="ObjectShortName">shift_register[9:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top/tmc/counter">
+   <wvobject type="array" fp_name="/tb/top/tmc/counter">
       <obj_property name="ElementShortName">counter[3:0]</obj_property>
       <obj_property name="ObjectShortName">counter[3:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/tmc/state">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
+   <wvobject type="array" fp_name="/tb/top/tmc/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/tmc/next_state">
-      <obj_property name="ElementShortName">next_state</obj_property>
-      <obj_property name="ObjectShortName">next_state</obj_property>
+   <wvobject type="array" fp_name="/tb/top/tmc/next_state">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/tmc/shift">
+   <wvobject type="logic" fp_name="/tb/top/tmc/shift">
       <obj_property name="ElementShortName">shift</obj_property>
       <obj_property name="ObjectShortName">shift</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/tmc/load">
+   <wvobject type="logic" fp_name="/tb/top/tmc/load">
       <obj_property name="ElementShortName">load</obj_property>
       <obj_property name="ObjectShortName">load</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/tmc/clear">
+   <wvobject type="logic" fp_name="/tb/top/tmc/clear">
       <obj_property name="ElementShortName">clear</obj_property>
       <obj_property name="ObjectShortName">clear</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/reset">
+   <wvobject type="logic" fp_name="/tb/top/reset">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/top/uart_clock">
+   <wvobject type="logic" fp_name="/tb/top/uart_clock">
       <obj_property name="ElementShortName">uart_clock</obj_property>
       <obj_property name="ObjectShortName">uart_clock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/tmc/transmit_ready">
+      <obj_property name="ElementShortName">transmit_ready</obj_property>
+      <obj_property name="ObjectShortName">transmit_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/tmc/data">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/received_data">
+      <obj_property name="ElementShortName">received_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">received_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/uart_receiver_pin">
+      <obj_property name="ElementShortName">uart_receiver_pin</obj_property>
+      <obj_property name="ObjectShortName">uart_receiver_pin</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/rcc/state">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/rxshift_reg">
+      <obj_property name="ElementShortName">rxshift_reg[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rxshift_reg[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/rcc/shift">
+      <obj_property name="ElementShortName">shift</obj_property>
+      <obj_property name="ObjectShortName">shift</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/rcc/next_state">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/baudrate_counter">
+      <obj_property name="ElementShortName">baudrate_counter[13:0]</obj_property>
+      <obj_property name="ObjectShortName">baudrate_counter[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/div_counter">
+      <obj_property name="ElementShortName">div_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">div_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/sample_counter">
+      <obj_property name="ElementShortName">sample_counter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_counter[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/mid_sample">
+      <obj_property name="ElementShortName">mid_sample[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mid_sample[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/top/rcc/inc_samplecounter">
+      <obj_property name="ElementShortName">inc_samplecounter</obj_property>
+      <obj_property name="ObjectShortName">inc_samplecounter</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/div_bit">
+      <obj_property name="ElementShortName">div_bit[31:0]</obj_property>
+      <obj_property name="ObjectShortName">div_bit[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/top/rcc/bit_counter">
+      <obj_property name="ElementShortName">bit_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_counter[3:0]</obj_property>
    </wvobject>
 </wave_config>
