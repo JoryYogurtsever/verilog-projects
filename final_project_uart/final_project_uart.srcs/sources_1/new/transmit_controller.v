@@ -33,7 +33,6 @@ module transmit_controller #(
     reg transmitting; // does user input require message transmission
     reg [7:0] data;
     reg transmit_ready = 1'b0;
-    
     // UART transmission
     always @ (posedge uart_clock)
     begin
@@ -42,6 +41,7 @@ module transmit_controller #(
             state <= 0; // reset the state to idle if rst button is pressed
             counter <= 0;
             transmitting <= 0;
+            uart_transmitter_pin <= 1;
         end
     else // Create logic to determine when we must transmit, should be based on change in one of the walk buttons, or jump button going from low to high.
         begin

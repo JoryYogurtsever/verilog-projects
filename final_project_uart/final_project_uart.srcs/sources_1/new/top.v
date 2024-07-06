@@ -2,7 +2,7 @@ module top #(
 clk_board = 100_000_000,// Board clock frequency [Hz].
 baud_rate = 9600
 ) (
-    input left_btn, right_btn, jump_btn, clk, reset, uart_receiver_pin,
+    input left_btn, right_btn, jump_btn, clk, reset,
     output uart_transmitter_pin
 );
 
@@ -14,18 +14,14 @@ wire change_right_button;
 wire change_jump_button;
 wire db_clock;
 wire uart_clock;
-wire receiver_clock;
 reg transmitting = 1'b1;
-reg receiving;
+wire uart_out;
 // Clocking and timing parameters.
 reg [25:0] db_clock_period = 25'b0000100110001001011010000;
 reg [25:0] uart_clock_period = 25'b0000000000001010001011000;
-reg [25:0] receiver_clock_period = 25'b0000000000000010100010110;
-wire [7:0] received_data;
 
 slow_clock get_db_clk(clk, db_clock_period, db_clock);
 slow_clock get_uart_clk(clk, uart_clock_period, uart_clock);
-slow_clock get_receiver_clk(clk, receiver_clock_period, receiver_clock);
 
 
 debounce2 db_walk_left (
@@ -59,14 +55,7 @@ transmit_controller tmc (
     change_left_button,
     change_right_button,
     change_jump_button,
-    uart_transmitter_pin
+    uart_out
 );
-
-receiver_controller rcc (
-    clk,
-    reset,
-    uart_receiver_pin,
-    received_data
-);
-
+assign uart_transmitter_pin = uart_out;
 endmodule
