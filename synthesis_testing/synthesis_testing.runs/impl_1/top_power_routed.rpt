@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Sat Jul  6 22:44:49 2024
+| Date             : Mon Jul  8 21:31:53 2024
 | Host             : yogurtseversever running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      141 |       --- |             --- |
+| Slice Logic    |    <0.001 |      142 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       35 |     63400 |            0.06 |
 |   CARRY4       |    <0.001 |       10 |     15850 |            0.06 |
-|   Register     |    <0.001 |       73 |    126800 |            0.06 |
+|   Register     |    <0.001 |       74 |    126800 |            0.06 |
 |   Others       |     0.000 |       18 |       --- |             --- |
-| Signals        |    <0.001 |      102 |       --- |             --- |
+| Signals        |    <0.001 |      101 |       --- |             --- |
 | I/O            |    <0.001 |        5 |       210 |            2.38 |
 | Static Power   |     0.084 |          |           |                 |
 | Total          |     0.085 |          |           |                 |

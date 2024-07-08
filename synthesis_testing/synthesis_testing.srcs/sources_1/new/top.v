@@ -14,7 +14,6 @@ wire change_right_button;
 wire change_jump_button;
 wire db_clock;
 wire uart_clock;
-//reg transmitting = 1'b1;
 wire uart_out;
 // Clocking and timing parameters.
 reg [25:0] db_clock_period = 25'b0000100110001001011010000;
@@ -25,7 +24,7 @@ slow_clock get_uart_clk(clk, uart_clock_period, uart_clock);
 
 
 debounce2 db_walk_left (
-    left_btn,                    // Input button #0.
+    left_btn,
     db_clock,
     unbounced_left_button,
     change_left_button
